@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       name: scouter-agent
-  replicas: 5
+  replicas: 3
   template:
     metadata:
       labels:
@@ -27,7 +27,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: scouter-agent
-        image: wlbebetter/scouter-agent:2.17.1
+        image: wlbebetter/sa-scouter-agent:2.17.1
         volumeMounts:
         - name: scouter-agent-config
           mountPath: /opt/scouter/agent.java/conf
